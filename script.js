@@ -1,12 +1,7 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", () => {
-    const footer = document.querySelector("footer p");
+const currentYear = document.getElementById("current-year");
 
-    if (footer) {
-        const year = new Date().getFullYear();
-
-        footer.textContent =
-            `© ${year} Nasandratriniavo Fanasina Rasamizafy`;
-    }
-});
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+}
