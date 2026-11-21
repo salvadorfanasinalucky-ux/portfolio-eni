@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Portfolio de Rasamizafy Nasandratriniavo Fanasina, étudiant en informatique à l'ENI.">
+    <meta name="description" content="Portfolio de Fanasina, étudiant en informatique à l'ENI. Découvrez ses projets, ses compétences et ses solutions numériques.">
+    <meta name="theme-color" content="#081426">
 
-    <title>Portfolio | Fanasina</title>
+    <title>Fanasina | Développeur web en formation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,9 +20,12 @@
 <body>
 
     <!-- NAVIGATION -->
-    <header>
-        <nav class="navbar">
-            <a href="#accueil" class="logo">FANASINA</a>
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Navigation principale">
+
+            <a href="#accueil" class="logo">
+                FANA<span>SINA</span><span class="logo-dot">.</span>
+            </a>
 
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
@@ -25,225 +33,453 @@
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#projets">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
+
+            <a href="#contact" class="nav-contact">Me contacter <span>↗</span></a>
+
         </nav>
     </header>
 
     <main>
 
         <!-- ACCUEIL -->
-        <section id="accueil" class="hero">
-            <div class="hero-content">
+        <section id="accueil" class="hero section">
 
-                <p class="welcome">BIENVENUE SUR MON PORTFOLIO</p>
+            <div class="container hero-grid">
 
-                <h1>
-                    Bonjour, je suis
-                    <span>Fanasina</span>
-                </h1>
+                <div class="hero-content">
 
-                <h2>Étudiant en informatique à l'ENI</h2>
+                    <p class="eyebrow">
+                        <span class="status-dot"></span>
+                        ÉTUDIANT EN INFORMATIQUE · ENI
+                    </p>
 
-                <p>
-                    Développement web, programmation et conception
-                    de solutions numériques.
-                </p>
+                    <h1>
+                        Je transforme<br>
+                        vos idées en<br>
+                        <span>solutions numériques.</span>
+                    </h1>
 
-                <a href="#projets" class="btn">
-                    Découvrir mes projets
-                </a>
+                    <p class="hero-description">
+                        Je suis Fanasina, passionné par l'informatique,
+                        la programmation et le développement web.
+                        Je construis progressivement des solutions
+                        numériques utiles et accessibles.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projets" class="btn btn-primary">
+                            Découvrir mes projets <span>↗</span>
+                        </a>
+
+                        <a href="#contact" class="btn btn-secondary">
+                            Discutons ensemble
+                        </a>
+                    </div>
+
+                    <div class="hero-note">
+                        <span class="note-line"></span>
+                        Basé à Madagascar · Ouvert aux échanges et collaborations
+                    </div>
+
+                </div>
+
+                <div class="hero-visual" aria-label="Présentation de mon univers informatique">
+
+                    <div class="visual-glow"></div>
+
+                    <div class="code-window">
+
+                        <div class="window-header">
+                            <div class="window-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span>mon-univers.js</span>
+                        </div>
+
+                        <div class="code-content">
+                            <p><span class="code-purple">const</span> developer = {</p>
+                            <p class="code-indent">
+                                name: <span class="code-green">"Fanasina"</span>,
+                            </p>
+                            <p class="code-indent">
+                                field: <span class="code-green">"Informatique"</span>,
+                            </p>
+                            <p class="code-indent">
+                                passion: <span class="code-green">"Innovation"</span>,
+                            </p>
+                            <p class="code-indent">
+                                location: <span class="code-green">"Madagascar"</span>
+                            </p>
+                            <p>};</p>
+                            <br>
+                            <p><span class="code-purple">function</span> <span class="code-blue">createSolution</span>() {</p>
+                            <p class="code-indent">
+                                <span class="code-purple">return</span> <span class="code-green">"Une idée, un projet."</span>;
+                            </p>
+                            <p>}</p>
+                        </div>
+
+                        <div class="code-footer">
+                            <span class="status-dot"></span>
+                            Toujours en apprentissage
+                        </div>
+
+                    </div>
+
+                    <div class="floating-tag tag-top">HTML · CSS · JS</div>
+                    <div class="floating-tag tag-bottom">BUILD YOUR IDEAS</div>
+
+                </div>
 
             </div>
         </section>
+
 
         <!-- À PROPOS -->
-        <section id="apropos">
+        <section id="apropos" class="section about-section">
 
-            <h2>À propos de moi</h2>
+            <div class="container">
 
-            <div class="about-content">
+                <div class="section-heading">
+                    <p class="eyebrow">01 — QUI SUIS-JE ?</p>
+                    <h2>La passion de comprendre.<br><span>L'envie de construire.</span></h2>
+                </div>
 
-                <p>
-                    Je suis Rasamizafy Nasandratriniavo Fanasina,
-                    étudiant en première année en Informatique à l'ENI.
-                </p>
+                <div class="about-grid">
 
-                <p>
-                    Je m'intéresse à la programmation, au développement
-                    logiciel et aux nouvelles technologies.
-                </p>
+                    <div class="about-main">
+                        <p class="about-lead">
+                            Je suis Rasamizafy Nasandratriniavo Fanasina,
+                            étudiant en première année en informatique
+                            à l'École Nationale d'Informatique (ENI).
+                        </p>
 
-                <p>
-                    Mon objectif est de développer mes compétences
-                    et de concevoir des solutions informatiques utiles
-                    aux personnes et aux entreprises.
-                </p>
+                        <p>
+                            Je m'intéresse au développement logiciel,
+                            à la programmation et aux nouvelles technologies.
+                            J'aime apprendre, expérimenter et transformer
+                            des idées en projets concrets.
+                        </p>
+
+                        <p>
+                            Mon ambition est de progresser continuellement
+                            et de participer à la création de solutions
+                            numériques adaptées aux besoins des utilisateurs.
+                        </p>
+                    </div>
+
+                    <div class="about-highlight">
+                        <span class="highlight-number">01</span>
+                        <h3>Apprendre aujourd'hui. Construire demain.</h3>
+                        <p>
+                            Chaque projet est une occasion de développer
+                            mes compétences et d'améliorer ma manière
+                            de résoudre les problèmes.
+                        </p>
+                    </div>
+
+                </div>
 
             </div>
         </section>
+
 
         <!-- COMPÉTENCES -->
-        <section id="competences">
+        <section id="competences" class="section skills-section">
 
-            <h2>Mes compétences</h2>
+            <div class="container">
 
-            <div class="card-container">
-
-                <article class="card">
-                    <h3>HTML</h3>
-                    <p>
-                        Structure et organisation des pages web.
+                <div class="section-heading">
+                    <p class="eyebrow">02 — MON SAVOIR-FAIRE</p>
+                    <h2>Mes compétences <span>techniques.</span></h2>
+                    <p class="section-description">
+                        Les technologies et domaines que j'étudie
+                        et que je développe à travers mes projets.
                     </p>
-                </article>
+                </div>
 
-                <article class="card">
-                    <h3>CSS</h3>
-                    <p>
-                        Mise en forme et conception d'interfaces web.
-                    </p>
-                </article>
+                <div class="card-container">
 
-                <article class="card">
-                    <h3>JavaScript</h3>
-                    <p>
-                        Programmation et interactivité des sites web.
-                    </p>
-                </article>
+                    <article class="card skill-card">
+                        <span class="card-number">01</span>
+                        <div class="skill-symbol">HTML</div>
+                        <h3>HTML5</h3>
+                        <p>
+                            Structuration de pages web et organisation
+                            sémantique du contenu.
+                        </p>
+                    </article>
 
-                <article class="card">
-                    <h3>Informatique</h3>
-                    <p>
-                        Algorithmique et bases de la programmation.
-                    </p>
-                </article>
+                    <article class="card skill-card">
+                        <span class="card-number">02</span>
+                        <div class="skill-symbol">CSS</div>
+                        <h3>CSS3</h3>
+                        <p>
+                            Mise en page, styles visuels et adaptation
+                            des interfaces aux écrans.
+                        </p>
+                    </article>
+
+                    <article class="card skill-card">
+                        <span class="card-number">03</span>
+                        <div class="skill-symbol">JS</div>
+                        <h3>JavaScript</h3>
+                        <p>
+                            Bases de la programmation web et création
+                            d'interactions dynamiques.
+                        </p>
+                    </article>
+
+                    <article class="card skill-card">
+                        <span class="card-number">04</span>
+                        <div class="skill-symbol">&lt;/&gt;</div>
+                        <h3>Algorithmique</h3>
+                        <p>
+                            Logique informatique, raisonnement
+                            et résolution de problèmes.
+                        </p>
+                    </article>
+
+                </div>
 
             </div>
         </section>
+
 
         <!-- SERVICES -->
-        <section id="services">
+        <section id="services" class="section services-section">
 
-            <h2>Mes services</h2>
+            <div class="container">
 
-            <div class="services-container">
-
-                <article class="service-card">
-                    <h3>Création de sites web</h3>
-                    <p>
-                        Conception de sites web simples et adaptés
-                        aux besoins des utilisateurs.
+                <div class="section-heading">
+                    <p class="eyebrow">03 — CE QUE JE PROPOSE</p>
+                    <h2>Des idées aux <span>réalisations.</span></h2>
+                    <p class="section-description">
+                        Des prestations adaptées à mon niveau actuel,
+                        avec sérieux, écoute et volonté de progresser.
                     </p>
-                </article>
+                </div>
 
-                <article class="service-card">
-                    <h3>Intégration web</h3>
-                    <p>
-                        Création de pages web avec HTML, CSS
-                        et JavaScript.
-                    </p>
-                </article>
+                <div class="services-container">
 
-                <article class="service-card">
-                    <h3>Solutions numériques</h3>
-                    <p>
-                        Étude et réalisation de projets informatiques.
-                    </p>
-                </article>
+                    <article class="service-card">
+                        <span class="service-icon">01</span>
+                        <h3>Création de sites web</h3>
+                        <p>
+                            Réalisation de sites vitrines simples
+                            pour présenter une activité, une entreprise
+                            ou un projet.
+                        </p>
+                        <a href="#contact" class="service-link">
+                            Discuter du projet ↗
+                        </a>
+                    </article>
+
+                    <article class="service-card">
+                        <span class="service-icon">02</span>
+                        <h3>Intégration web</h3>
+                        <p>
+                            Transformation de maquettes et d'idées
+                            en interfaces web avec HTML, CSS
+                            et JavaScript.
+                        </p>
+                        <a href="#contact" class="service-link">
+                            Discuter du projet ↗
+                        </a>
+                    </article>
+
+                    <article class="service-card">
+                        <span class="service-icon">03</span>
+                        <h3>Projets numériques</h3>
+                        <p>
+                            Participation à l'étude et à la conception
+                            de petits projets informatiques adaptés
+                            à des besoins précis.
+                        </p>
+                        <a href="#contact" class="service-link">
+                            Discuter du projet ↗
+                        </a>
+                    </article>
+
+                </div>
 
             </div>
         </section>
+
 
         <!-- PROJETS -->
-        <section id="projets">
+        <section id="projets" class="section projects-section">
 
-            <h2>Mes projets</h2>
+            <div class="container">
 
-            <div class="card-container">
-
-                <article class="project-card">
-
-                    <h3>FANASINACHAT</h3>
-
-                    <p>
-                        Projet de messagerie mobile sécurisée destiné
-                        à faciliter la communication.
+                <div class="section-heading">
+                    <p class="eyebrow">04 — MES RÉALISATIONS</p>
+                    <h2>Des projets qui <span>me font avancer.</span></h2>
+                    <p class="section-description">
+                        Quelques réalisations qui illustrent mon parcours
+                        et mon apprentissage.
                     </p>
+                </div>
 
-                    <span class="project-status">
-                        Projet en développement
-                    </span>
+                <div class="projects-grid">
 
-                </article>
+                    <article class="project-card">
 
-                <article class="project-card">
+                        <div class="project-visual project-visual-chat">
+                            <span class="project-label">MESSAGERIE NUMÉRIQUE</span>
+                            <div class="project-visual-title">FANASINA<span>CHAT</span></div>
+                            <div class="project-visual-caption">
+                                Un projet de communication
+                            </div>
+                        </div>
 
-                    <h3>Portfolio personnel</h3>
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span>PROJET PERSONNEL</span>
+                                <span class="project-status">En développement</span>
+                            </div>
 
-                    <p>
-                        Site web personnel pour présenter mes compétences,
-                        mon parcours et mes réalisations.
-                    </p>
+                            <h3>FANASINACHAT</h3>
 
-                    <span class="project-status">
-                        En ligne
-                    </span>
+                            <p>
+                                Projet de messagerie mobile destiné
+                                à faciliter la communication.
+                                Le projet est actuellement en développement.
+                            </p>
 
-                </article>
+                            <div class="project-tags">
+                                <span>Développement</span>
+                                <span>Communication</span>
+                            </div>
+                        </div>
+
+                    </article>
+
+
+                    <article class="project-card">
+
+                        <div class="project-visual project-visual-portfolio">
+                            <span class="project-label">WEB DESIGN & DÉVELOPPEMENT</span>
+                            <div class="portfolio-preview">
+                                <span>FANASINA.</span>
+                                <strong>Mon univers<br>numérique.</strong>
+                                <small>PORTFOLIO PERSONNEL</small>
+                            </div>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span>PROJET PERSONNEL</span>
+                                <span class="project-status">En ligne</span>
+                            </div>
+
+                            <h3>Portfolio personnel</h3>
+
+                            <p>
+                                Site web conçu pour présenter mon parcours,
+                                mes compétences, mes projets et mes
+                                possibilités de collaboration.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <a
+                                href="https://salvadorfanasinalucky-ux.github.io/portfolio-eni/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                Visiter le site ↗
+                            </a>
+                        </div>
+
+                    </article>
+
+                </div>
 
             </div>
         </section>
 
+
         <!-- CONTACT -->
-        <section id="contact">
+        <section id="contact" class="section contact-section">
 
-            <h2>Me contacter</h2>
+            <div class="container contact-container">
 
-            <p>
-                Vous souhaitez discuter d'un projet
-                ou me contacter ?
-            </p>
+                <div class="section-heading">
+                    <p class="eyebrow">05 — PARLONS DE VOTRE PROJET</p>
+                    <h2>Une idée en tête ?<br><span>Construisons-la ensemble.</span></h2>
+                    <p class="section-description">
+                        Une question, une proposition ou un projet ?
+                        Je serai heureux d'échanger avec vous.
+                    </p>
+                </div>
 
-            <div class="contact-info">
+                <div class="contact-panel">
 
-                <p>
-                    <strong>Email :</strong>
-                    <a href="mailto:salvadorfanasinalucky@gmail.com">
-                        salvadorfanasinalucky@gmail.com
-                    </a>
-                </p>
+                    <div class="contact-item">
+                        <span class="contact-label">EMAIL</span>
+                        <a href="mailto:salvadorfanasinalucky@gmail.com">
+                            salvadorfanasinalucky@gmail.com ↗
+                        </a>
+                    </div>
 
-                <p>
-                    <strong>Téléphone :</strong>
-                    <a href="tel:+261386048050">
-                        +261 38 60 480 50
-                    </a>
-                </p>
+                    <div class="contact-item">
+                        <span class="contact-label">RÉSEAU SOCIAL</span>
+                        <a
+                            href="https://www.facebook.com/profile.php?id=61567670547028"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Mon profil Facebook ↗
+                        </a>
+                    </div>
 
-                <p>
-                    <strong>Facebook :</strong>
+                    <div class="contact-item">
+                        <span class="contact-label">LOCALISATION</span>
+                        <p>Madagascar</p>
+                    </div>
 
-                    <a
-                        href="https://www.facebook.com/profile.php?id=61567670547028"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visiter mon profil Facebook
-                    </a>
-                </p>
+                </div>
+
+                <a
+                    href="mailto:salvadorfanasinalucky@gmail.com?subject=Discussion%20sur%20un%20projet"
+                    class="btn btn-primary contact-button"
+                >
+                    Envoyer un message <span>↗</span>
+                </a>
 
             </div>
         </section>
 
     </main>
 
-    <!-- PIED DE PAGE -->
-    <footer>
 
-        <p>
-            © 2026 Rasamizafy Nasandratriniavo Fanasina.
-            Tous droits réservés.
-        </p>
+    <!-- PIED DE PAGE -->
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <a href="#accueil" class="logo">
+                FANA<span>SINA</span><span class="logo-dot">.</span>
+            </a>
+
+            <p>
+                © 2026 Fanasina. Tous droits réservés.
+            </p>
+
+            <a href="#accueil" class="back-top">
+                Retour en haut ↑
+            </a>
+
+        </div>
 
     </footer>
 
