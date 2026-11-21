@@ -3,106 +3,121 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // ========================================
-    // 1. ÉLÉMENTS DU SITE
-    // ========================================
+    // =====================================
+    // 1. MENU DE NAVIGATION MOBILE
+    // =====================================
 
-    const navbar = document.querySelector(".navbar");
+    const menuButton = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
     const navigationLinks = document.querySelectorAll(
         '.nav-links a[href^="#"]'
     );
 
-    // ========================================
-    // 2. MENU MOBILE
-    // ========================================
+    function closeMenu() {
+        if (!menuButton || !navLinks) return;
 
-    const menuButton = document.querySelector(".menu-toggle");
+        navLinks.classList.remove("active");
+        menuButton.classList.remove("is-open");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Ouvrir le menu");
+        document.body.classList.remove("menu-open");
+    }
 
     if (menuButton && navLinks) {
 
         menuButton.addEventListener("click", () => {
-
             const isOpen = navLinks.classList.toggle("active");
 
+            menuButton.classList.toggle("is-open", isOpen);
             menuButton.setAttribute("aria-expanded", String(isOpen));
             menuButton.setAttribute(
                 "aria-label",
                 isOpen ? "Fermer le menu" : "Ouvrir le menu"
             );
 
-            menuButton.classList.toggle("is-open", isOpen);
-
+            document.body.classList.toggle("menu-open", isOpen);
         });
 
         navigationLinks.forEach(link => {
-
-            link.addEventListener("click", () => {
-
-                navLinks.classList.remove("active");
-                menuButton.classList.remove("is-open");
-
-                menuButton.setAttribute("aria-expanded", "false");
-                menuButton.setAttribute("aria-label", "Ouvrir le menu");
-
-            });
-
+            link.addEventListener("click", closeMenu);
         });
 
+        // Fermer le menu avec la touche Échap
+        document.addEventListener("keydown", event => {
+            if (event.key === "Escape") {
+                closeMenu();
+                menuButton.focus();
+            }
+        });
+
+        // Fermer le menu si on revient à un écran large
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 700) {
+                closeMenu();
+            }
+        });
     }
 
-    // ========================================
-    // 3. NAVIGATION ACTIVE
-    // ========================================
 
-    const sections = document.querySelectorAll("main section[id]");
+    // =====================================
+    // 2. NAVIGATION ACTIVE AU DÉFILEMENT
+    // =====================================
+
+    const sections = document.querySelectorAll(
+        "main section[id]"
+    );
 
     if ("IntersectionObserver" in window) {
 
-        const sectionObserver = new IntersectionObserver(entries => {
+        const sectionObserver = new IntersectionObserver(
+            entries => {
 
-            entries.forEach(entry => {
+                entries.forEach(entry => {
 
-                if (entry.isIntersecting) {
+                    if (entry.isIntersecting) {
 
-                    const currentId = entry.target.id;
+                        const currentId = entry.target.id;
 
-                    navigationLinks.forEach(link => {
+                        navigationLinks.forEach(link => {
 
-                        const isActive =
-                            link.getAttribute("href") === `#${currentId}`;
+                            const isActive =
+                                link.getAttribute("href") === `#${currentId}`;
 
-                        link.classList.toggle("active-link", isActive);
+                            link.classList.toggle("active-link", isActive);
 
-                        if (isActive) {
-                            link.setAttribute("aria-current", "location");
-                        } else {
-                            link.removeAttribute("aria-current");
-                        }
+                            if (isActive) {
+                                link.setAttribute("aria-current", "location");
+                            } else {
+                                link.removeAttribute("aria-current");
+                            }
+                        });
+                    }
+                });
 
-                    });
-
-                }
-
-            });
-
-        }, {
-            rootMargin: "-30% 0px -60% 0px"
-        });
+            },
+            {
+                rootMargin: "-25% 0px -65% 0px"
+            }
+        );
 
         sections.forEach(section => {
             sectionObserver.observe(section);
         });
-
     }
 
-    // ========================================
-    // 4. ANIMATIONS AU DÉFILEMENT
-    // ========================================
+
+    // =====================================
+    // 3. ANIMATIONS À L'APPARITION
+    // =====================================
 
     const animatedElements = document.querySelectorAll(
-        ".section-heading, .about-main, .about-highlight, " +
-        ".skill-card, .service-card, .project-card, .contact-item"
+        ".section-heading, " +
+        ".about-main, " +
+        ".about-highlight, " +
+        ".skill-card, " +
+        ".service-card, " +
+        ".project-card, " +
+        ".contact-item"
     );
 
     const prefersReducedMotion = window.matchMedia(
@@ -114,37 +129,36 @@ document.addEventListener("DOMContentLoaded", () => {
         !prefersReducedMotion
     ) {
 
-        const revealObserver = new IntersectionObserver(entries => {
+        const revealObserver = new IntersectionObserver(
+            entries => {
 
-            entries.forEach(entry => {
+                entries.forEach(entry => {
 
-                if (entry.isIntersecting) {
+                    if (entry.isIntersecting) {
 
-                    entry.target.classList.add("is-visible");
+                        entry.target.classList.add("is-visible");
 
-                    revealObserver.unobserve(entry.target);
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
 
-                }
-
-            });
-
-        }, {
-            threshold: 0.12
-        });
+            },
+            {
+                threshold: 0.12
+            }
+        );
 
         animatedElements.forEach(element => {
-
             element.classList.add("reveal");
-
             revealObserver.observe(element);
-
         });
 
     }
 
-    // ========================================
-    // 5. ANNÉE AUTOMATIQUE
-    // ========================================
+
+    // =====================================
+    // 4. ANNÉE AUTOMATIQUE DU FOOTER
+    // =====================================
 
     const currentYear = document.querySelector("#current-year");
 
@@ -152,26 +166,38 @@ document.addEventListener("DOMContentLoaded", () => {
         currentYear.textContent = new Date().getFullYear();
     }
 
-    // ========================================
-    // 6. FERMER LE MENU AVEC ÉCHAP
-    // ========================================
 
-    document.addEventListener("keydown", event => {
+    // =====================================
+    // 5. PROTECTION DES LIENS INTERNES
+    // =====================================
 
-        if (event.key === "Escape" && menuButton && navLinks) {
+    navigationLinks.forEach(link => {
 
-            navLinks.classList.remove("active");
-            menuButton.classList.remove("is-open");
+        link.addEventListener("click", event => {
 
-            menuButton.setAttribute("aria-expanded", "false");
-            menuButton.setAttribute("aria-label", "Ouvrir le menu");
+            const targetId = link.getAttribute("href");
+            const target = document.querySelector(targetId);
 
-            menuButton.focus();
+            if (!target) {
+                event.preventDefault();
+                return;
+            }
 
-        }
+            target.scrollIntoView({
+                behavior: prefersReducedMotion ? "auto" : "smooth",
+                block: "start"
+            });
+        });
 
     });
 
-    console.log("FANASINA Portfolio : chargé correctement.");
+
+    // =====================================
+    // 6. MESSAGE DE CONFIRMATION CONSOLE
+    // =====================================
+
+    console.log(
+        "FANASINA Portfolio : application chargée correctement."
+    );
 
 });
