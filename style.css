@@ -12,6 +12,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -22,8 +23,8 @@ body {
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 section {
@@ -31,79 +32,96 @@ section {
 }
 
 section h2 {
-    font-size: 32px;
     margin-bottom: 25px;
     color: #0f172a;
+    font-size: 32px;
 }
 
 /* 2. Barre de navigation */
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background: #0f172a;
     color: white;
 }
 
-header h1 {
-    font-size: 20px;
-}
-
-nav {
+.navbar {
     display: flex;
-    gap: 25px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 18px 8%;
 }
 
-nav a {
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
     color: #cbd5e1;
     font-size: 14px;
     transition: color 0.3s;
 }
 
-nav a:hover {
+.nav-links a:hover {
     color: #38bdf8;
 }
 
 /* 3. Accueil */
 
-#accueil {
+.hero {
     min-height: 450px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     background: linear-gradient(135deg, #0f172a, #1e3a8a);
     color: white;
 }
 
-#accueil h2 {
-    color: white;
-    font-size: 42px;
-    max-width: 750px;
-    line-height: 1.2;
-    margin-bottom: 25px;
+.hero-content {
+    width: 100%;
+    max-width: 850px;
 }
 
-#accueil p {
+.hero h1 {
+    max-width: 750px;
+    margin-bottom: 25px;
+    color: white;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.hero p {
     max-width: 650px;
     margin-bottom: 15px;
     color: #dbeafe;
 }
 
-#accueil a {
+.hero .btn {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 25px;
+    border-radius: 6px;
     background: #38bdf8;
     color: #0f172a;
     font-weight: bold;
-    border-radius: 6px;
     transition: background 0.3s;
 }
 
-#accueil a:hover {
+.hero .btn:hover {
     background: #7dd3fc;
 }
 
@@ -124,44 +142,70 @@ nav a:hover {
     background: #f1f5f9;
 }
 
-#competences article {
-    display: inline-block;
-    vertical-align: top;
-    width: 30%;
-    min-width: 220px;
-    margin: 1%;
-    padding: 25px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+/* 6. Services */
+
+#services {
+    background: #f8fafc;
 }
 
-#competences h3 {
+#services > p {
+    max-width: 850px;
+    margin-bottom: 25px;
+}
+
+/* 7. Cartes des compétences et services */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.card {
+    padding: 25px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.12);
+}
+
+.card h3 {
     margin-bottom: 10px;
     color: #1d4ed8;
+    font-size: 20px;
 }
 
-/* 6. Projets */
+.card p {
+    color: #334155;
+}
+
+/* 8. Projets */
 
 #projets {
     background: white;
 }
 
-#projets article {
-    max-width: 800px;
-    margin-bottom: 25px;
-    padding: 25px;
+#projets .card-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#projets .card {
     border-left: 4px solid #2563eb;
-    background: #f8fafc;
     border-radius: 0 8px 8px 0;
+    background: #f8fafc;
 }
 
 #projets h3 {
-    margin-bottom: 10px;
     color: #1d4ed8;
 }
 
-/* 7. Contact */
+/* 9. Contact */
 
 #contact {
     background: #f1f5f9;
@@ -170,8 +214,8 @@ nav a:hover {
 .contact-info {
     max-width: 700px;
     padding: 25px;
-    background: white;
     border-radius: 12px;
+    background: white;
 }
 
 .contact-info p {
@@ -187,41 +231,62 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* 8. Pied de page */
+/* 10. Pied de page */
 
 footer {
     padding: 25px;
-    text-align: center;
     background: #0f172a;
     color: #cbd5e1;
+    text-align: center;
     font-size: 14px;
 }
 
-/* 9. Adaptation aux téléphones */
+/* 11. Tablettes */
 
-@media (max-width: 768px) {
-
-    header {
+@media (max-width: 900px) {
+    .navbar {
         flex-direction: column;
         gap: 15px;
-        padding: 20px;
     }
 
-    nav {
-        flex-wrap: wrap;
+    .nav-links {
         justify-content: center;
-        gap: 15px;
     }
 
+    .card-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* 12. Téléphones */
+
+@media (max-width: 600px) {
     section {
         padding: 50px 6%;
     }
 
-    #accueil {
+    .navbar {
+        padding: 18px 6%;
+    }
+
+    .logo {
+        white-space: normal;
+        text-align: center;
+    }
+
+    .nav-links {
+        gap: 10px 16px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
         min-height: 400px;
     }
 
-    #accueil h2 {
+    .hero h1 {
         font-size: 32px;
     }
 
@@ -229,10 +294,9 @@ footer {
         font-size: 26px;
     }
 
-    #competences article {
-        display: block;
-        width: 100%;
-        margin: 15px 0;
+    .card-container,
+    #projets .card-container {
+        grid-template-columns: 1fr;
     }
 
     .contact-info {
