@@ -1,76 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- CONTACT -->
-<section id="contact" class="section contact-section">
+    <meta
+        name="description"
+        content="Portfolio de Fanasina, étudiant en informatique à l'ENI Madagascar et développeur web en formation."
+    >
+    <meta name="theme-color" content="#071426">
 
-    <div class="container contact-container">
+    <title>Fanasina | Développeur web en formation</title>
 
-        <div class="section-heading">
-            <p class="eyebrow">05 — PARLONS DE VOTRE PROJET</p>
-            <h2>Une idée en tête ?<br><span>Construisons-la ensemble.</span></h2>
-            <p class="section-description">
-                Une question, une proposition ou un projet ?
-                Je serai heureux d'échanger avec vous.
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="page-glow page-glow-one" aria-hidden="true"></div>
+    <div class="page-glow page-glow-two" aria-hidden="true"></div>
+
+    <!-- NAVIGATION -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Navigation principale">
+            <a href="#accueil" class="logo" aria-label="Fanasina, accueil">
+                FANA<span>SINA</span><span class="logo-dot">.</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Ouvrir le menu"
+                aria-expanded="false"
+                aria-controls="navigation-links"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="navigation-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projets">Projets</a></li>
+            </ul>
+
+            <a href="#contact" class="nav-contact">
+                Me contacter <span>↗</span>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ACCUEIL -->
+        <section id="accueil" class="hero container">
+            <div class="hero-content">
+                <div class="availability">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    Étudiant en informatique · Madagascar
+                </div>
+
+                <p class="eyebrow">DÉVELOPPEUR WEB EN FORMATION</p>
+
+                <h1>
+                    Je transforme vos idées en
+                    <span class="gradient-text">solutions numériques.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Je suis étudiant en informatique à l’ENI Madagascar.
+                    J’apprends à concevoir des interfaces web modernes et
+                    à développer des solutions numériques utiles.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#projets" class="btn btn-primary">
+                        Découvrir mes projets <span>↗</span>
+                    </a>
+
+                    <a href="#contact" class="btn btn-secondary">
+                        Me contacter
+                    </a>
+                </div>
+
+                <p class="hero-location">
+                    <span aria-hidden="true">⌖</span>
+                    Madagascar
+                </p>
+            </div>
+
+            <div class="hero-visual" aria-label="Illustration de code">
+                <div class="visual-card">
+                    <div class="visual-topbar">
+                        <div class="window-dots" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span class="visual-caption">FANASINA / PORTFOLIO</span>
+                    </div>
+
+                    <div class="visual-content">
+                        <p class="code-muted">// Mon parcours numérique</p>
+
+                        <p>
+                            <span class="code-purple">const</span>
+                            developer = {
+                        </p>
+
+                        <div class="code-indent">
+                            <p><span class="code-green">name</span>: "Fanasina",</p>
+                            <p><span class="code-green">field</span>: "Informatique",</p>
+                            <p><span class="code-green">school</span>: "ENI Madagascar",</p>
+                            <p><span class="code-green">focus</span>: "Web development"</p>
+                        </div>
+
+                        <p>};</p>
+
+                        <div class="code-divider"></div>
+
+                        <p class="terminal-line">
+                            <span class="terminal-symbol">›</span>
+                            Construire, apprendre, progresser<span class="cursor"></span>
+                        </p>
+                    </div>
+
+                    <div class="visual-footer">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JAVASCRIPT</span>
+                    </div>
+                </div>
+
+                <div class="floating-tag tag-top">Code · Créativité</div>
+                <div class="floating-tag tag-bottom">En apprentissage continu</div>
+            </div>
+        </section>
+
+        <!-- À PROPOS -->
+        <section id="apropos" class="section section-alt">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">01 — À PROPOS</p>
+                    <h2>Apprendre aujourd’hui, <span class="gradient-text">créer demain.</span></h2>
+                    <p class="section-description">
+                        Un parcours en informatique orienté vers la création
+                        de solutions numériques utiles.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-main">
+                        <p>
+                            Je m’appelle Rasamizafy Nasandratriniavo Fanasina.
+                            Je suis étudiant en première année à l’ENI Madagascar,
+                            dans le domaine de l’informatique.
+                        </p>
+
+                        <p>
+                            Je développe progressivement mes compétences en
+                            programmation, en conception web et en résolution
+                            de problèmes. J’aime apprendre en réalisant des
+                            projets concrets.
+                        </p>
+
+                        <p>
+                            Mon objectif est de continuer à progresser et de
+                            concevoir des outils numériques accessibles,
+                            pratiques et adaptés aux besoins des utilisateurs.
+                        </p>
+                    </div>
+
+                    <aside class="about-highlight">
+                        <span class="highlight-icon" aria-hidden="true">✦</span>
+                        <h3>La technologie au service des idées.</h3>
+                        <p>
+                            Chaque projet est une occasion d’apprendre,
+                            d’expérimenter et d’améliorer mes compétences.
+                        </p>
+                        <span class="highlight-line"></span>
+                        <span class="highlight-caption">ÉTUDIANT · ENI MADAGASCAR</span>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPÉTENCES -->
+        <section id="competences" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">02 — COMPÉTENCES</p>
+                    <h2>Mes bases <span class="gradient-text">techniques.</span></h2>
+                    <p class="section-description">
+                        Les technologies et notions que j’étudie et que je
+                        mets progressivement en pratique dans mes projets.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">HTML</div>
+                        <h3>HTML</h3>
+                        <p>Structuration de pages web avec une attention portée à la sémantique.</p>
+                        <span class="skill-status">En apprentissage</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">CSS</div>
+                        <h3>CSS</h3>
+                        <p>Mise en forme, organisation des interfaces et adaptation aux écrans.</p>
+                        <span class="skill-status">En apprentissage</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">JS</div>
+                        <h3>JavaScript</h3>
+                        <p>Premiers développements d’interactions et de fonctionnalités web.</p>
+                        <span class="skill-status">En apprentissage</span>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon" aria-hidden="true">{ }</div>
+                        <h3>Algorithmique</h3>
+                        <p>Logique de programmation, décomposition et résolution de problèmes.</p>
+                        <span class="skill-status">En apprentissage</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="section section-alt">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">03 — SERVICES</p>
+                    <h2>Ce que je peux <span class="gradient-text">réaliser.</span></h2>
+                    <p class="section-description">
+                        Des prestations adaptées à mes compétences actuelles,
+                        avec une communication claire sur le périmètre de chaque projet.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="service-card">
+                        <span class="service-number">01</span>
+                        <div class="service-icon" aria-hidden="true">⌘</div>
+                        <h3>Pages web</h3>
+                        <p>
+                            Création de pages web simples et structurées en
+                            HTML et CSS, adaptées aux écrans mobiles et ordinateurs.
+                        </p>
+                        <span class="service-arrow" aria-hidden="true">↗</span>
+                    </article>
+
+                    <article class="service-card">
+                        <span class="service-number">02</span>
+                        <div class="service-icon" aria-hidden="true">◇</div>
+                        <h3>Interfaces web</h3>
+                        <p>
+                            Mise en page d’interfaces claires et modernes,
+                            en accord avec les besoins et le contenu du projet.
+                        </p>
+                        <span class="service-arrow" aria-hidden="true">↗</span>
+                    </article>
+
+                    <article class="service-card">
+                        <span class="service-number">03</span>
+                        <div class="service-icon" aria-hidden="true">{ }</div>
+                        <h3>Initiation au code</h3>
+                        <p>
+                            Accompagnement sur des notions de base en HTML,
+                            CSS et algorithmique, selon le besoin.
+                        </p>
+                        <span class="service-arrow" aria-hidden="true">↗</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETS -->
+        <section id="projets" class="section">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">04 — PROJETS</p>
+                    <h2>Quelques projets <span class="gradient-text">en cours.</span></h2>
+                    <p class="section-description">
+                        Des réalisations personnelles qui me permettent
+                        d’appliquer mes connaissances et de progresser.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-visual chat-visual">
+                            <span class="chat-bubble bubble-one"></span>
+                            <span class="chat-bubble bubble-two"></span>
+                            <span class="chat-bubble bubble-three"></span>
+                            <div class="chat-symbol" aria-hidden="true">F</div>
+                            <span class="project-visual-label">MESSAGERIE</span>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span>PROJET PERSONNEL</span>
+                                <span class="project-status">En développement</span>
+                            </div>
+
+                            <h3>FANASINACHAT</h3>
+                            <p>
+                                Projet de messagerie visant à explorer la
+                                conception d’une application de communication
+                                et ses fonctionnalités.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>JavaScript</span>
+                                <span>Web</span>
+                                <span>En développement</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-visual portfolio-visual">
+                            <div class="portfolio-window" aria-hidden="true">
+                                <div class="portfolio-window-top"></div>
+                                <div class="portfolio-window-line"></div>
+                                <div class="portfolio-window-line short"></div>
+                                <div class="portfolio-window-button"></div>
+                            </div>
+                            <span class="project-visual-label">PORTFOLIO WEB</span>
+                        </div>
+
+                        <div class="project-info">
+                            <div class="project-meta">
+                                <span>PROJET PERSONNEL</span>
+                                <span class="project-status">En ligne</span>
+                            </div>
+
+                            <h3>Portfolio personnel</h3>
+                            <p>
+                                Site web personnel présentant mon parcours,
+                                mes compétences, mes projets et mes coordonnées.
+                            </p>
+
+                            <div class="project-tags">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <a
+                                class="project-link"
+                                href="https://salvadorfanasinalucky-ux.github.io/portfolio-eni/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Voir le portfolio <span>↗</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section section-alt">
+            <div class="container">
+                <div class="contact-panel">
+                    <div class="contact-content">
+                        <p class="eyebrow">05 — PARLONS DE VOTRE PROJET</p>
+                        <h2>
+                            Une idée en tête ?<br>
+                            <span class="gradient-text">Construisons-la ensemble.</span>
+                        </h2>
+                        <p>
+                            Une question, une proposition ou un projet ?
+                            Je serai heureux d’échanger avec vous.
+                        </p>
+
+                        <a
+                            href="mailto:salvadorfanasinalucky@gmail.com?subject=Discussion%20sur%20un%20projet"
+                            class="btn btn-primary"
+                        >
+                            Envoyer un message <span>↗</span>
+                        </a>
+                    </div>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-label">EMAIL</span>
+                            <a href="mailto:salvadorfanasinalucky@gmail.com">
+                                salvadorfanasinalucky@gmail.com ↗
+                            </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-label">TÉLÉPHONE 1</span>
+                            <a href="tel:+261386048050">038 60 480 50 ↗</a>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-label">TÉLÉPHONE 2</span>
+                            <a href="tel:+261380232734">038 02 327 34 ↗</a>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-label">WHATSAPP</span>
+                            <a
+                                href="https://wa.me/261380232734"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Me contacter sur WhatsApp ↗
+                            </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-label">RÉSEAU SOCIAL</span>
+                            <a
+                                href="https://www.facebook.com/profile.php?id=61567670547028"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                Mon profil Facebook ↗
+                            </a>
+                        </div>
+
+                        <div class="contact-item">
+                            <span class="contact-label">LOCALISATION</span>
+                            <p>Madagascar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIED DE PAGE -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <a href="#accueil" class="logo">
+                FANA<span>SINA</span><span class="logo-dot">.</span>
+            </a>
+
+            <p class="copyright">
+                © <span id="current-year">2026</span> Fanasina. Tous droits réservés.
             </p>
+
+            <a href="#accueil" class="project-link">
+                Retour en haut ↑
+            </a>
         </div>
-
-        <div class="contact-panel">
-
-            <div class="contact-item">
-                <span class="contact-label">EMAIL</span>
-                <a href="mailto:salvadorfanasinalucky@gmail.com">
-                    salvadorfanasinalucky@gmail.com ↗
-                </a>
-            </div>
-
-            <div class="contact-item">
-                <span class="contact-label">TÉLÉPHONE 1</span>
-                <a href="tel:+261386048050">
-                    038 60 480 50 ↗
-                </a>
-            </div>
-
-            <div class="contact-item">
-                <span class="contact-label">TÉLÉPHONE 2</span>
-                <a href="tel:+261380232734">
-                    038 02 327 34 ↗
-                </a>
-            </div>
-
-            <div class="contact-item">
-                <span class="contact-label">WHATSAPP</span>
-                <a
-                    href="https://wa.me/261380232734"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Me contacter sur WhatsApp ↗
-                </a>
-            </div>
-
-            <div class="contact-item">
-                <span class="contact-label">RÉSEAU SOCIAL</span>
-                <a
-                    href="https://www.facebook.com/profile.php?id=61567670547028"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Mon profil Facebook ↗
-                </a>
-            </div>
-
-            <div class="contact-item">
-                <span class="contact-label">LOCALISATION</span>
-                <p>Madagascar</p>
-            </div>
-
-        </div>
-
-        <a
-            href="mailto:salvadorfanasinalucky@gmail.com?subject=Discussion%20sur%20un%20projet"
-            class="btn btn-primary contact-button"
-        >
-            Envoyer un message <span>↗</span>
-        </a>
-
-    </div>
-</section>
+    </footer>
+</body>
+</html>
