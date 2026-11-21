@@ -1,7 +1,20 @@
+
 "use strict";
 
-const currentYear = document.getElementById("current-year");
+document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll('.nav-links a');
 
-if (currentYear) {
-    currentYear.textContent = new Date().getFullYear();
-}
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            const target = document.querySelector(link.getAttribute("href"));
+
+            if (target) {
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+
+    console.log("Portfolio chargé correctement.");
+});
