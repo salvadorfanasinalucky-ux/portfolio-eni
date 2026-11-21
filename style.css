@@ -12,7 +12,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 90px;
+    scroll-padding-top: 20px;
 }
 
 body {
@@ -40,9 +40,8 @@ section h2 {
 /* 2. Barre de navigation */
 
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: relative;
+    width: 100%;
     background: #0f172a;
     color: white;
 }
@@ -153,7 +152,7 @@ header {
     margin-bottom: 25px;
 }
 
-/* 7. Cartes des compétences et services */
+/* 7. Cartes des compétences, services et projets */
 
 .card-container {
     display: grid;
@@ -199,10 +198,6 @@ header {
     border-left: 4px solid #2563eb;
     border-radius: 0 8px 8px 0;
     background: #f8fafc;
-}
-
-#projets h3 {
-    color: #1d4ed8;
 }
 
 /* 9. Contact */
