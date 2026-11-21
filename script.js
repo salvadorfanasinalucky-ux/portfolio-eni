@@ -8,25 +8,29 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     const currentYear = document.getElementById("current-year");
 
-    // Année automatique dans le pied de page
+    // Met à jour automatiquement l'année du pied de page.
     if (currentYear) {
         currentYear.textContent = new Date().getFullYear();
     }
 
-    // Menu mobile
+    // Menu mobile.
     function closeMobileMenu() {
         if (!menuToggle || !navLinks) return;
 
         navLinks.classList.remove("is-open");
         menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Ouvrir le menu");
     }
 
     if (menuToggle && navLinks) {
-        menuToggle.setAttribute("aria-expanded", "false");
-
         menuToggle.addEventListener("click", () => {
             const isOpen = navLinks.classList.toggle("is-open");
+
             menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Fermer le menu" : "Ouvrir le menu"
+            );
         });
 
         navigationAnchors.forEach((link) => {
@@ -46,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Animation d'apparition des éléments
+    // Animations d'apparition au défilement.
     const revealSelectors = [
         ".section-heading",
         ".about-main",
@@ -85,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Mise en évidence du lien correspondant à la section visible
+    // Met en évidence le lien correspondant à la section visible.
     const sections = document.querySelectorAll("main section[id]");
 
     if ("IntersectionObserver" in window && sections.length > 0) {
@@ -94,10 +98,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 entries.forEach((entry) => {
                     if (!entry.isIntersecting) return;
 
-                    const sectionId = entry.target.id;
+                    const currentId = entry.target.id;
 
                     navigationAnchors.forEach((link) => {
-                        const isCurrent = link.getAttribute("href") === `#${sectionId}`;
+                        const isCurrent =
+                            link.getAttribute("href") === `#${currentId}`;
 
                         link.classList.toggle("active", isCurrent);
 
