@@ -1,201 +1,150 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Rasamizafy Nasandratriniavo Fanasina | Portfolio</title>
-
-    <meta
-        name="description"
-        content="Portfolio de Rasamizafy Nasandratriniavo Fanasina, étudiant en informatique et développeur web."
-    >
-
+    <meta name="description" content="Portfolio de Rasamizafy Nasandratriniavo Fanasina, étudiant en informatique à l'ENI. Découvrez ses compétences et projets.">
+    <title>Portfolio | Rasamizafy Nasandratriniavo Fanasina</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header>
-        <h1>
-            <a class="logo" href="#accueil">
-                Rasamizafy Nasandratriniavo Fanasina
-            </a>
-        </h1>
-
-        <nav aria-label="Navigation principale">
-            <a href="#accueil">Accueil</a>
-            <a href="#apropos">À propos</a>
-            <a href="#competences">Compétences</a>
-            <a href="#services">Services</a>
-            <a href="#projets">Projets</a>
-            <a href="#contact">Contact</a>
+        <nav class="navbar">
+            <a href="#accueil" class="logo">FANASINA</a>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-
-        <!-- ACCUEIL -->
-        <section id="accueil">
-            <h2>Étudiant en informatique et développeur web</h2>
-
-            <p>
-                Je suis Rasamizafy Nasandratriniavo Fanasina,
-                étudiant en première année à l'École Nationale
-                d'Informatique (ENI).
-            </p>
-
-            <p>
-                Je m'intéresse au développement web, à la programmation
-                et à la création de solutions informatiques.
-            </p>
-
-            <a href="#projets">Découvrir mes projets</a>
+        <section id="accueil" class="hero">
+            <div class="hero-content">
+                <p class="welcome">BIENVENUE SUR MON PORTFOLIO</p>
+                <h1>Bonjour, je suis <span>Fanasina</span></h1>
+                <h2>Étudiant en informatique à l'ENI</h2>
+                <p>Développement web, programmation et conception de solutions numériques.</p>
+                <a href="#projets" class="btn">Découvrir mes projets</a>
+            </div>
         </section>
 
-        <!-- À PROPOS -->
         <section id="apropos">
             <h2>À propos de moi</h2>
-
-            <p>
-                Je suis étudiant en informatique à l'École Nationale
-                d'Informatique. Je développe progressivement mes compétences
-                en programmation et en création de sites web.
-            </p>
-
-            <p>
-                Mon objectif est de concevoir des solutions numériques
-                utiles, simples à utiliser et adaptées aux besoins
-                des utilisateurs.
-            </p>
+            <div class="about-content">
+                <p>
+                    Je suis Rasamizafy Nasandratriniavo Fanasina,
+                    étudiant en première année en Informatique à l'ENI.
+                    Je m'intéresse à la programmation, au développement
+                    logiciel et aux nouvelles technologies.
+                </p>
+                <p>
+                    Mon objectif est de développer mes compétences
+                    et de concevoir des solutions informatiques utiles
+                    aux personnes et aux entreprises.
+                </p>
+            </div>
         </section>
 
-        <!-- COMPÉTENCES -->
         <section id="competences">
             <h2>Mes compétences</h2>
-
-            <article>
-                <h3>HTML</h3>
-                <p>Structuration de pages web avec HTML.</p>
-            </article>
-
-            <article>
-                <h3>CSS</h3>
-                <p>Mise en forme et présentation de pages web avec CSS.</p>
-            </article>
-
-            <article>
-                <h3>JavaScript</h3>
-                <p>Bases de la programmation et de l'interactivité web.</p>
-            </article>
+            <div class="card-container">
+                <article class="card">
+                    <h3>HTML</h3>
+                    <p>Structure et organisation des pages web.</p>
+                </article>
+                <article class="card">
+                    <h3>CSS</h3>
+                    <p>Mise en forme et conception d'interfaces web.</p>
+                </article>
+                <article class="card">
+                    <h3>JavaScript</h3>
+                    <p>Initiation à la programmation et à l'interactivité.</p>
+                </article>
+                <article class="card">
+                    <h3>Informatique</h3>
+                    <p>Algorithmique et bases de la programmation.</p>
+                </article>
+            </div>
         </section>
 
-        <!-- SERVICES -->
         <section id="services">
             <h2>Mes services</h2>
-
-            <p>
-                Je propose des services de développement web adaptés
-                aux besoins des particuliers, des étudiants et des petites
-                entreprises.
-            </p>
-
-            <article>
-                <h3>Création de sites web</h3>
-                <p>
-                    Création de sites vitrines simples pour présenter
-                    une activité, un projet ou une entreprise.
-                </p>
-            </article>
-
-            <article>
-                <h3>Adaptation mobile</h3>
-                <p>
-                    Mise en page de sites web pour une consultation
-                    confortable sur ordinateur, tablette et téléphone.
-                </p>
-            </article>
-
-            <article>
-                <h3>Amélioration de pages web</h3>
-                <p>
-                    Aide à la correction de problèmes d'affichage
-                    et à l'amélioration de pages HTML et CSS existantes.
-                </p>
-            </article>
+            <div class="services-container">
+                <article class="service-card">
+                    <h3>Création de sites web</h3>
+                    <p>Conception de sites web simples et adaptés aux besoins.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Intégration web</h3>
+                    <p>Création de pages web avec HTML, CSS et JavaScript.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Solutions numériques</h3>
+                    <p>Étude et réalisation de petits projets informatiques.</p>
+                </article>
+            </div>
         </section>
 
-        <!-- PROJETS -->
         <section id="projets">
             <h2>Mes projets</h2>
+            <div class="card-container">
+                <article class="project-card">
+                    <h3>FANASINACHAT</h3>
+                    <p>
+                        Projet de messagerie mobile sécurisée destiné
+                        à faciliter la communication.
+                    </p>
+                    <span class="project-status">Projet en développement</span>
+                </article>
 
-            <article>
-                <h3>Site de présentation d'un restaurant</h3>
-                <p>
-                    Développement d'un site web pour présenter
-                    le restaurant familial, ses services et ses activités.
-                </p>
-            </article>
-
-            <article>
-                <h3>FANASINACHAT</h3>
-                <p>
-                    Développement d'une application de messagerie
-                    destinée à faciliter les communications.
-                </p>
-            </article>
+                <article class="project-card">
+                    <h3>Portfolio personnel</h3>
+                    <p>
+                        Site web personnel pour présenter mes compétences,
+                        mon parcours et mes réalisations.
+                    </p>
+                    <span class="project-status">En ligne</span>
+                </article>
+            </div>
         </section>
 
-        <!-- CONTACT -->
         <section id="contact">
             <h2>Me contacter</h2>
-
-            <p>
-                Vous avez un projet de développement web ou souhaitez
-                collaborer avec moi ? Contactez-moi.
-            </p>
+            <p>Vous souhaitez discuter d'un projet ou me contacter ?</p>
 
             <div class="contact-info">
-                <p>
-                    <strong>Téléphone :</strong>
-                    <a href="tel:+261386048050">038 60 48 050</a>
-                </p>
-
-                <p>
-                    <strong>Téléphone secondaire :</strong>
-                    <a href="tel:+261380232734">038 02 32 734</a>
-                </p>
-
-                <p>
-                    <strong>E-mail :</strong>
+                <p><strong>Email :</strong>
                     <a href="mailto:salvadorfanasinalucky@gmail.com">
                         salvadorfanasinalucky@gmail.com
                     </a>
                 </p>
 
-                <p>
-                    <strong>Facebook :</strong>
-                    <a
-                        href="https://www.facebook.com/profile.php?id=61567670547028"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        FANASINA RSM
+                <p><strong>Téléphone :</strong>
+                    <a href="tel:+261386048050">+261 38 60 480 50</a>
+                </p>
+
+                <p><strong>Facebook :</strong>
+                    <a href="https://www.facebook.com/profile.php?id=61567670547028"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Mon profil Facebook
                     </a>
                 </p>
             </div>
         </section>
-
     </main>
 
     <footer>
-        <p>
-            © <span id="current-year">2026</span>
-            Rasamizafy Nasandratriniavo Fanasina
-        </p>
+        <p>© 2026 Rasamizafy Nasandratriniavo Fanasina. Tous droits réservés.</p>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>
