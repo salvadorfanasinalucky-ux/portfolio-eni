@@ -1,0 +1,241 @@
+/* ===================================
+   PORTFOLIO DE NASANDRATRINIAVO FANASINA
+   =================================== */
+
+/* 1. Configuration générale */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    padding: 80px 8%;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #0f172a;
+}
+
+/* 2. Barre de navigation */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: #0f172a;
+    color: white;
+}
+
+header h1 {
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #cbd5e1;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* 3. Accueil */
+
+#accueil {
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+}
+
+#accueil h2 {
+    color: white;
+    font-size: 42px;
+    max-width: 750px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+#accueil p {
+    max-width: 650px;
+    margin-bottom: 15px;
+    color: #dbeafe;
+}
+
+#accueil a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+#accueil a:hover {
+    background: #7dd3fc;
+}
+
+/* 4. À propos */
+
+#apropos {
+    background: white;
+}
+
+#apropos p {
+    max-width: 850px;
+    margin-bottom: 15px;
+}
+
+/* 5. Compétences */
+
+#competences {
+    background: #f1f5f9;
+}
+
+#competences article {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    min-width: 220px;
+    margin: 1%;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+}
+
+#competences h3 {
+    margin-bottom: 10px;
+    color: #1d4ed8;
+}
+
+/* 6. Projets */
+
+#projets {
+    background: white;
+}
+
+#projets article {
+    max-width: 800px;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-left: 4px solid #2563eb;
+    background: #f8fafc;
+    border-radius: 0 8px 8px 0;
+}
+
+#projets h3 {
+    margin-bottom: 10px;
+    color: #1d4ed8;
+}
+
+/* 7. Contact */
+
+#contact {
+    background: #f1f5f9;
+}
+
+.contact-info {
+    max-width: 700px;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+}
+
+.contact-info p {
+    margin: 15px 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-info a {
+    color: #2563eb;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* 8. Pied de page */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #0f172a;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+/* 9. Adaptation aux téléphones */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    section {
+        padding: 50px 6%;
+    }
+
+    #accueil {
+        min-height: 400px;
+    }
+
+    #accueil h2 {
+        font-size: 32px;
+    }
+
+    section h2 {
+        font-size: 26px;
+    }
+
+    #competences article {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .contact-info {
+        padding: 20px;
+    }
+}
